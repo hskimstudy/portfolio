@@ -32,12 +32,41 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 }
-);
+)
+
+const arrowUp = document.querySelector('.arrowUp')
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2)
+    arrowUp.classList.add('visible')
+  else {
+    arrowUp.classList.remove('visible')
+  }
+})
+
+arrowUp.addEventListener('click', () => {
+  scrollIntoView('#home');
+});
+
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project")
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter
+  if (filter === null) {
+    return;
+  }
+
+  let project;
+  for (let i = 0; i < projects.length; i++) {
+    project = projects[i];
+    console.log(project.dataset.type);
+  }
 
 
+})
 
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector)
   scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
+};
