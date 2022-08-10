@@ -161,6 +161,12 @@ p {
   text-align: center;
   margin: none;
 }
+
+#home.home--dark {
+  background-color: transparent;
+  color: transparent;
+}
+
 .home__avarta {
   width: 190px;
   height: 250px;
