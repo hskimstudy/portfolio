@@ -45,6 +45,7 @@ a {
   color: var(--color-white);
 }
 
+ul,
 li {
   list-style: none;
   padding-left: 0;
@@ -326,6 +327,7 @@ section {
 .tools,
 .etc {
   padding: 20px;
+  padding-right: 10px;
 }
 
 /* Work */
