@@ -55,15 +55,22 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter === null) {
     return;
   }
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      }
+      else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim-out');
+  }, 300)
 
-  let project;
-  for (let i = 0; i < projects.length; i++) {
-    project = projects[i];
-    console.log(project.dataset.type);
-  }
+});
 
-
-})
 
 
 function scrollIntoView(selector) {
