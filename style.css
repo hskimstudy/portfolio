@@ -120,6 +120,8 @@ p {
 }
 
 .navbar__logo {
+  width: 50px;
+  height: 50px;
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   display: inline-flex;
@@ -498,7 +500,7 @@ section {
 
   .navbar__toggle-btn {
     display: block;
-    top: 16px;
+    top: 27px;
     right: 16px;
     font-size: var(--font-medium);
   }
@@ -511,6 +513,11 @@ section {
 
   #navbar.navbar--dark {
     background-color: var(--color-pink);
+  }
+
+  .navbar__logo {
+    width: 40px;
+    height: 40px;
   }
 
   .navbar__menu {
